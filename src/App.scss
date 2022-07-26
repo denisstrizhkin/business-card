@@ -1,0 +1,167 @@
+.App {
+  max-width: 500px;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+  color: var(--clr-1);
+}
+
+$color1: rgb(255, 255, 255);
+$color2: rgb(239, 239, 239);
+$color3: rgb(34,34,34);
+$color4: rgb(155, 205, 154);
+
+.theme--light {
+  --bckg-1: #{$color1};
+  --bckg-2: #{$color2};
+  --clr-1: #{$color3};
+  --clr-2: #{$color4};
+
+  #icon-toggle-light {
+    display: inline;
+  }
+
+  #icon-toggle-dark {
+    display: none;
+  }
+}
+
+.theme--dark {
+  --bckg-1: #{$color3};
+  --bckg-2: #{$color2};
+  --clr-1: #{$color1};
+  --clr-2: #{$color4};
+  
+  #icon-toggle-light {
+    display: none;
+  }
+
+  #icon-toggle-dark {
+    display: inline;
+  }
+}
+
+.hero {
+  padding-top: 1em;
+}
+
+.hero-info {
+  text-align: center;
+  position: relative;
+}
+
+.hero__profile {
+  clip-path: circle(50%);
+}
+
+.hero__fullname {
+  font-size: 2.5rem;
+  margin-top: 1em;
+}
+
+.hero__specialty {
+  font-size: 1.5rem;
+  color: var(--clr-2);
+}
+
+.hero__website {
+  margin-block: 1em 2em;
+}
+
+.hero__email {
+  display: block;
+  width: 95%;
+  margin-inline: auto;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 0.25em;
+  padding-block: 0.5em;
+  cursor: pointer;
+}
+
+.hero__email:hover {
+  background: var(--clr-2);
+}
+
+.hero__email:active {
+  background: var(--bckg-2);
+}
+
+.hero__email > svg {
+  vertical-align: middle;
+  height: 1.75rem;
+  width: 1.75rem;
+  margin-right: 0.5em;
+}
+
+#theme-toggle {
+  position: absolute;
+  top: -3em;
+  right: 0.5em;
+  background: (0,0,0,0);
+  border: none;
+  cursor: pointer;
+  color: var(--clr-1);
+}
+
+#theme-toggle:hover {
+  color: var(--clr-2);
+}
+
+#theme-toggle:active {
+  color: var(--clr-1);
+}
+
+#theme-toggle > svg {
+  width: 2.5em;
+  height: 2.5em;
+  vertical-align: middle;
+}
+
+.about {
+  padding-block: 2.5em;
+}
+
+.about__title {
+  margin-bottom: 0.4em;
+}
+
+.about__text {
+  margin-bottom: 1em;
+  line-height: 1.5;
+}
+
+.padding {
+  padding-inline: 2.0em;
+}
+
+.footer {
+  margin-top: auto;
+  padding-block: 0.5em;
+  background: var(--clr-2);
+  color: var(--bckg-1);
+}
+
+.icons-list {
+  display: flex;
+  justify-content: center;
+}
+
+.icons-list__item > a > svg {
+  height: 2.25rem;
+  width: 2.25rem;
+}
+
+.icons-list__item > a:hover {
+  color: var(--clr-1);
+}
+
+.icons-list__item > a:active {
+  color: var(--bckg-1);
+}
+
+.icons-list__item + .icons-list__item {
+  margin-left: 1em;
+}
